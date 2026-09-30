@@ -83,7 +83,7 @@
                 </div>
             </div>
 
-            <!-- Quick Match / Summary Card on Right -->
+            <!-- Quick Match Card on Right -->
             <div class="lg:col-span-5 bg-cardBg border border-slate-800/80 rounded-2xl p-6 shadow-2xl relative">
                 <div class="flex items-center justify-between pb-4 border-b border-slate-800">
                     <div class="flex items-center gap-3">
@@ -130,7 +130,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Card 1 -->
                 <div class="bg-cardBg border border-slate-800/80 p-6 rounded-2xl hover:border-indigo-500/50 transition">
                     <div class="w-10 h-10 rounded-xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center mb-4 text-lg">
                         <i class="fa-solid fa-sitemap"></i>
@@ -138,7 +137,6 @@
                     <h3 class="text-lg font-bold text-white mb-2">Software Architecture</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Design robust backend and frontend solutions, reusable components, and maintainable enterprise application architectures.</p>
                 </div>
-                <!-- Card 2 -->
                 <div class="bg-cardBg border border-slate-800/80 p-6 rounded-2xl hover:border-indigo-500/50 transition">
                     <div class="w-10 h-10 rounded-xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center mb-4 text-lg">
                         <i class="fa-solid fa-cloud"></i>
@@ -146,7 +144,6 @@
                     <h3 class="text-lg font-bold text-white mb-2">Cloud Engineering</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Build and deploy enterprise applications across Microsoft Azure, including Azure SQL, Azure Functions, and Azure Active Directory.</p>
                 </div>
-                <!-- Card 3 -->
                 <div class="bg-cardBg border border-slate-800/80 p-6 rounded-2xl hover:border-indigo-500/50 transition">
                     <div class="w-10 h-10 rounded-xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center mb-4 text-lg">
                         <i class="fa-solid fa-network-wired"></i>
@@ -154,7 +151,6 @@
                     <h3 class="text-lg font-bold text-white mb-2">Backend & APIs</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Extensive hands-on mastery with C#, .NET Core, EF Core, REST APIs, and microservices-oriented application design.</p>
                 </div>
-                <!-- Card 4 -->
                 <div class="bg-cardBg border border-slate-800/80 p-6 rounded-2xl hover:border-indigo-500/50 transition">
                     <div class="w-10 h-10 rounded-xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center mb-4 text-lg">
                         <i class="fa-solid fa-rocket"></i>
@@ -162,7 +158,6 @@
                     <h3 class="text-lg font-bold text-white mb-2">DevOps & Zero-Downtime</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Establish automated CI/CD pipelines via Azure DevOps/Docker and execute Blue/Green & Canary deployment strategies.</p>
                 </div>
-                <!-- Card 5 -->
                 <div class="bg-cardBg border border-slate-800/80 p-6 rounded-2xl hover:border-indigo-500/50 transition">
                     <div class="w-10 h-10 rounded-xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center mb-4 text-lg">
                         <i class="fa-solid fa-shield-check"></i>
@@ -170,7 +165,6 @@
                     <h3 class="text-lg font-bold text-white mb-2">Security & Quality</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Manage secure code changes, automated testing suites, reusable modules, and rigorous engineering quality standards.</p>
                 </div>
-                <!-- Card 6 -->
                 <div class="bg-cardBg border border-slate-800/80 p-6 rounded-2xl hover:border-indigo-500/50 transition">
                     <div class="w-10 h-10 rounded-xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center mb-4 text-lg">
                         <i class="fa-solid fa-users-gear"></i>
@@ -334,5 +328,86 @@
         </div>
     </section>
 
+    <!-- Recruiter? Ask AI Widget (Bottom Right Floating Button & Drawer) -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button id="aiChatBtn" onclick="toggleAIChat()" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white px-4 py-3 rounded-full shadow-2xl flex items-center gap-2.5 text-xs font-semibold transition group">
+            <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+            <i class="fa-solid fa-sparkles text-indigo-400"></i> RECRUITER? ASK AI
+        </button>
+    </div>
+
+    <!-- AI Chat Drawer Modal -->
+    <div id="aiChatDrawer" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-end sm:items-center justify-center p-0 sm:p-4">
+        <div class="bg-cardBg border border-slate-800 w-full sm:max-w-lg rounded-t-2xl sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col h-[500px]">
+            <div class="p-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-lg bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-xs">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xs font-bold text-white">Asad's AI Career Assistant</h3>
+                        <p class="text-[10px] text-emerald-400 font-mono">Online · Trained on Asad's CV</p>
+                    </div>
+                </div>
+                <button onclick="toggleAIChat()" class="text-slate-400 hover:text-white p-1">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <div id="chatMessages" class="p-4 flex-1 overflow-y-auto space-y-3 text-xs text-slate-300">
+                <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800 max-w-[85%]">
+                    Hello! I'm Asad Gilani's AI assistant. Ask me anything about his 13+ years of enterprise architecture, .NET Core leadership, Microsoft Azure deployments, or management experience!
+                </div>
+            </div>
+
+            <div class="p-3 bg-slate-900 border-t border-slate-800 flex gap-2">
+                <input type="text" id="chatInput" placeholder="e.g. Does Asad have Azure experience?" class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500" onkeypress="handleKey(event)">
+                <button onclick="sendAIMessage()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-xl text-xs font-semibold transition">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Widget Script -->
+    <script>
+        function toggleAIChat() {
+            const drawer = document.getElementById('aiChatDrawer');
+            drawer.classList.toggle('hidden');
+            drawer.classList.toggle('flex');
+        }
+
+        function handleKey(e) {
+            if (e.key === 'Enter') sendAIMessage();
+        }
+
+        function sendAIMessage() {
+            const input = document.getElementById('chatInput');
+            const messages = document.getElementById('chatMessages');
+            const query = input.value.trim();
+            if (!query) return;
+
+            // User message
+            messages.innerHTML += `<div class="bg-indigo-600/20 border border-indigo-500/30 p-3 rounded-xl ml-auto max-w-[85%] text-white">${query}</div>`;
+            input.value = '';
+            messages.scrollTop = messages.scrollHeight;
+
+            // Simulated intelligent response based on Asad's CV
+            setTimeout(() => {
+                let reply = "Asad has over 13 years of enterprise software experience, specializing in C#, .NET Core, Microservices, and Microsoft Azure deployments with zero-downtime Blue/Green strategies.";
+                const q = query.toLowerCase();
+                if (q.includes('azure') || q.includes('cloud')) {
+                    reply = "Yes! Asad is Microsoft Certified in Azure Fundamentals and Data Fundamentals, with extensive hands-on experience building solutions across Azure SQL, Azure Functions, and Azure Active Directory.";
+                } else.includes('net') || q.includes('c#') || q.includes('backend')) {
+                    reply = "Asad is a Lead Software Engineer with deep expertise in C#, .NET Core, EF Core, REST APIs, and microservices architecture.";
+                } else if (q.includes('experience') || q.includes('years') || q.includes('lisec')) {
+                    reply = "Asad has been working as a Lead Software Engineer / Development Team Lead at LiSEC Automation Middle East FZ-LLC in Dubai since September 2013.";
+                } else if (q.includes('contact') || q.includes('email') || q.includes('phone')) {
+                    reply = "You can reach Asad directly via email at 082asad@gmail.com or by phone/WhatsApp at +971 56 131 1507.";
+                }
+
+                messages.innerHTML += `<div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800 max-w-[85%] text-slate-300">${reply}</div>`;
+                messages.scrollTop = messages.scrollHeight;
+            }, 600);
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asad Gilani | Lead Software Engineer & Technical Architect | Dubai, UAE</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#090a10',
+                        cardBg: '#121520',
+                        cardHover: '#1a1f30',
+                        accent: '#6366f1',
+                        accentGlow: 'rgba(99, 102, 241, 0.15)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-darkBg text-slate-100 font-sans antialiased selection:bg-accent selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-darkBg/80 backdrop-blur-md border-b border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-wider text-white bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700">AG</a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide text-slate-400">
+                <a href="#about" class="hover:text-white transition">ABOUT</a>
+                <a href="#leadership" class="hover:text-white transition">LEADERSHIP</a>
+                <a href="#experience" class="hover:text-white transition">EXPERIENCE</a>
+                <a href="#stack" class="hover:text-white transition">STACK</a>
+                <a href="#contact" class="hover:text-white transition">CONTACT</a>
+            </div>
+            <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-4 py-2.5 rounded-lg transition shadow-lg shadow-indigo-600/20">
+                <i class="fa-solid fa-file-arrow-down"></i> RESUME
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-24 pb-16 px-6 overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs text-slate-300 font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    AVAILABLE FOR LEADERSHIP OPPORTUNITIES · Dubai, UAE
+                </div>
+                
+                <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight text-white">
+                    Asad Gilani
+                </h1>
+                
+                <p class="text-xl sm:text-2xl font-semibold text-indigo-400">
+                    Lead Software Engineer & Technical Architect
+                </p>
+                
+                <p class="text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+                    13+ years of enterprise software experience designing, developing, and delivering scalable applications and guiding engineering teams in cloud-native Microsoft Azure environments.
+                </p>
+
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#contact" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm px-6 py-3.5 rounded-xl transition flex items-center gap-2 shadow-lg shadow-indigo-600/25">
+                        <i class="fa-solid fa-paper-plane"></i> GET IN TOUCH
+                    </a>
+                    <a href="https://linkedin.com/in/asad-gilani-65b2ba1b" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 font-medium text-sm px-6 py-3.5 rounded-xl transition flex items-center gap-2">
+                        <i class="fa-brands fa-linkedin text-indigo-400"></i> LinkedIn Profile
+                    </a>
+                </div>
+
+                <div class="pt-6 flex items-center gap-6 text-sm text-slate-400">
+                    <div><strong class="text-white">13+</strong> Years Experience</div>
+                    <div class="w-1 h-1 rounded-full bg-slate-700"></div>
+                    <div><strong class="text-white">Microsoft Azure</strong> Cloud Architect</div>
+                    <div class="w-1 h-1 rounded-full bg-slate-700"></div>
+                    <div><strong class="text-white">Dubai, UAE</strong> Based</div>
+                </div>
+            </div>
+
+            <!-- Quick Match / Summary Card on Right -->
+            <div class="lg:col-span-5 bg-cardBg border border-slate-800/80 rounded-2xl p-6 shadow-2xl relative">
+                <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-indigo-600/20 text-indigo-400 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-shield-halved text-sm"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-white">Technical Leadership Profile</h3>
+                            <p class="text-xs text-slate-400">Executive Summary</p>
+                        </div>
+                    </div>
+                    <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2.5 py-1 rounded-md font-mono">Verified CV</span>
+                </div>
+
+                <div class="py-5 space-y-4 text-sm text-slate-300">
+                    <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+                        <span class="text-indigo-400 font-semibold block mb-1">Core Expertise</span>
+                        C#, .NET Core, EF Core, Microservices, Angular, TypeScript, SQL Server & Microsoft Azure.
+                    </div>
+                    <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+                        <span class="text-indigo-400 font-semibold block mb-1">Deployment & DevOps</span>
+                        Zero-downtime Blue/Green & Canary deployment strategies, Azure DevOps, Docker, Jenkins, CI/CD.
+                    </div>
+                    <div class="bg-slate-900/60 p-3.5 rounded-xl border border-slate-800">
+                        <span class="text-indigo-400 font-semibold block mb-1">Certifications</span>
+                        Microsoft Certified: Azure Fundamentals & Data Fundamentals, Professional Scrum Master (PSM I).
+                    </div>
+                </div>
+
+                <div class="pt-2 border-t border-slate-800 flex justify-between items-center text-xs text-slate-500">
+                    <span>082asad@gmail.com</span>
+                    <span>+971 56 131 1507</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Leadership & Architecture -->
+    <section id="leadership" class="py-24 px-6 bg-[#0c0e15] border-t border-slate-800/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <span class="text-indigo-400 text-xs font-mono uppercase tracking-widest block mb-3">02 / LEADERSHIP & DOMAINS</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">Technical Direction & Architecture</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-cardBg border border-slate-800/80 p-6 rounded-2xl hover:border-indigo-500/50 transition">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center mb-4 text-lg">
+                        <i class="fa-solid fa-sitemap"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Software Architecture</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Design robust backend and frontend solutions, reusable components, and maintainable enterprise application architectures.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-cardBg border border-slate-800/80 p-6 rounded-2xl hover:border-indigo-500/50 transition">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center mb-4 text-lg">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Cloud Engineering</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Build and deploy enterprise applications across Microsoft Azure, including Azure SQL, Azure Functions, and Azure Active Directory.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-cardBg border border-slate-800/80 p-6 rounded-2xl hover:border-indigo-500/50 transition">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center mb-4 text-lg">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Backend & APIs</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Extensive hands-on mastery with C#, .NET Core, EF Core, REST APIs, and microservices-oriented application design.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-cardBg border border-slate-800/80 p-6 rounded-2xl hover:border-indigo-500/50 transition">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center mb-4 text-lg">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">DevOps & Zero-Downtime</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Establish automated CI/CD pipelines via Azure DevOps/Docker and execute Blue/Green & Canary deployment strategies.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-cardBg border border-slate-800/80 p-6 rounded-2xl hover:border-indigo-500/50 transition">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center mb-4 text-lg">
+                        <i class="fa-solid fa-shield-check"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Security & Quality</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Manage secure code changes, automated testing suites, reusable modules, and rigorous engineering quality standards.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="bg-cardBg border border-slate-800/80 p-6 rounded-2xl hover:border-indigo-500/50 transition">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600/10 text-indigo-400 flex items-center justify-center mb-4 text-lg">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Technical Mentoring</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Conduct structured technical workshops, mentor engineering talent, and build comprehensive architecture documentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 px-6 border-t border-slate-800/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+                <span class="text-indigo-400 text-xs font-mono uppercase tracking-widest block mb-3">03 / CAREER TIMELINE</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">Professional Experience</h2>
+            </div>
+
+            <div class="space-y-8 max-w-4xl">
+                <div class="bg-cardBg border border-slate-800/80 p-8 rounded-2xl relative">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Lead Software Engineer / Development Team Lead</h3>
+                            <p class="text-indigo-400 font-medium">LiSEC Automation Middle East FZ-LLC</p>
+                        </div>
+                        <span class="text-xs bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-slate-300 font-mono w-fit">Sep 2013 – Present · Dubai, UAE</span>
+                    </div>
+
+                    <ul class="space-y-3 text-slate-300 text-sm leading-relaxed">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-chevron-right text-indigo-400 text-xs mt-1.5"></i>
+                            <span>Architect and develop enterprise backend and frontend solutions using C#, .NET Core, EF Core, REST APIs, TypeScript, and SQL Server.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-chevron-right text-indigo-400 text-xs mt-1.5"></i>
+                            <span>Design robust, secure application components and guide implementation standards across codebases and backlogs.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-chevron-right text-indigo-400 text-xs mt-1.5"></i>
+                            <span>Design and execute Blue/Green and Canary deployment strategies across Microsoft Azure to support zero-downtime enterprise releases.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-chevron-right text-indigo-400 text-xs mt-1.5"></i>
+                            <span>Manage source control via Git repositories, CI/CD pipelines, secure coding practices, and comprehensive unit-test frameworks.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-chevron-right text-indigo-400 text-xs mt-1.5"></i>
+                            <span>Mentor team members, run technical workshops on modern architecture, and collaborate directly with business stakeholders on milestones.</span>
+                        </li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-slate-800/80 text-xs">
+                        <span class="bg-slate-900 text-slate-300 px-2.5 py-1 rounded border border-slate-800">C#</span>
+                        <span class="bg-slate-900 text-slate-300 px-2.5 py-1 rounded border border-slate-800">.NET Core</span>
+                        <span class="bg-slate-900 text-slate-300 px-2.5 py-1 rounded border border-slate-800">EF Core</span>
+                        <span class="bg-slate-900 text-slate-300 px-2.5 py-1 rounded border border-slate-800">TypeScript</span>
+                        <span class="bg-slate-900 text-slate-300 px-2.5 py-1 rounded border border-slate-800">SQL Server</span>
+                        <span class="bg-slate-900 text-slate-300 px-2.5 py-1 rounded border border-slate-800">Microsoft Azure</span>
+                        <span class="bg-slate-900 text-slate-300 px-2.5 py-1 rounded border border-slate-800">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack & Certifications -->
+    <section id="stack" class="py-24 px-6 bg-[#0c0e15] border-t border-slate-800/40">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+                <span class="text-indigo-400 text-xs font-mono uppercase tracking-widest block mb-3">04 / CORE STACK</span>
+                <h2 class="text-3xl font-bold text-white mb-8">Technical Architecture Stack</h2>
+
+                <div class="space-y-6 text-sm">
+                    <div class="bg-cardBg p-5 rounded-xl border border-slate-800/80">
+                        <h3 class="text-indigo-400 font-semibold mb-2">Languages</h3>
+                        <p class="text-slate-300">C#, C++, C, SQL/PLSQL, JavaScript, TypeScript</p>
+                    </div>
+                    <div class="bg-cardBg p-5 rounded-xl border border-slate-800/80">
+                        <h3 class="text-indigo-400 font-semibold mb-2">.NET & APIs</h3>
+                        <p class="text-slate-300">.NET Core, EF Core, REST APIs, Microservices, MVC, Win32 Programming</p>
+                    </div>
+                    <div class="bg-cardBg p-5 rounded-xl border border-slate-800/80">
+                        <h3 class="text-indigo-400 font-semibold mb-2">Cloud & DevOps</h3>
+                        <p class="text-slate-300">Microsoft Azure, Azure SQL, Azure Functions, Azure Active Directory, Azure DevOps, Docker, Jenkins</p>
+                    </div>
+                    <div class="bg-cardBg p-5 rounded-xl border border-slate-800/80">
+                        <h3 class="text-indigo-400 font-semibold mb-2">Databases & Frontend</h3>
+                        <p class="text-slate-300">SQL Server, PostgreSQL, MySQL, Angular, TypeScript</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <span class="text-indigo-400 text-xs font-mono uppercase tracking-widest block mb-3">05 / CREDENTIALS</span>
+                <h2 class="text-3xl font-bold text-white mb-8">Certifications & Education</h2>
+
+                <div class="space-y-6">
+                    <div class="bg-cardBg p-6 rounded-2xl border border-slate-800/80 space-y-4">
+                        <h3 class="text-white font-bold text-lg flex items-center gap-2">
+                            <i class="fa-solid fa-award text-indigo-400"></i> Professional Certifications
+                        </h3>
+                        <ul class="space-y-3 text-slate-300 text-sm">
+                            <li class="flex items-center gap-2 bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                                <i class="fa-solid fa-certificate text-indigo-400 text-xs"></i> Microsoft Certified: Azure Fundamentals
+                            </li>
+                            <li class="flex items-center gap-2 bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                                <i class="fa-solid fa-certificate text-indigo-400 text-xs"></i> Microsoft Certified: Azure Data Fundamentals
+                            </li>
+                            <li class="flex items-center gap-2 bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                                <i class="fa-solid fa-certificate text-indigo-400 text-xs"></i> Professional Scrum Master (PSM I)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-cardBg p-6 rounded-2xl border border-slate-800/80 space-y-3">
+                        <h3 class="text-white font-bold text-lg flex items-center gap-2">
+                            <i class="fa-solid fa-graduation-cap text-indigo-400"></i> Education
+                        </h3>
+                        <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                            <h4 class="font-bold text-white text-sm">B.Tech in Computer Science</h4>
+                            <p class="text-slate-400 text-xs mt-1">Guru Gobind Singh Indraprastha University, 2010</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <section id="contact" class="py-24 px-6 border-t border-slate-800/40">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <div>
+                <span class="text-indigo-400 text-xs font-mono uppercase tracking-widest block mb-3">06 / CONNECT</span>
+                <h2 class="text-4xl font-extrabold text-white">Let's Build Something Exceptional.</h2>
+                <p class="text-slate-400 mt-3 text-base">Whether you are looking for technical leadership, cloud architecture consultation, or engineering mentorship — reach out directly.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                <a href="mailto:082asad@gmail.com" class="bg-cardBg hover:bg-cardHover p-5 rounded-xl border border-slate-800 transition flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-envelope text-indigo-400 text-xl"></i>
+                    <span class="text-xs text-slate-400">Email Me</span>
+                    <span class="text-sm font-semibold text-white">082asad@gmail.com</span>
+                </a>
+                <a href="tel:+971561311507" class="bg-cardBg hover:bg-cardHover p-5 rounded-xl border border-slate-800 transition flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-phone text-indigo-400 text-xl"></i>
+                    <span class="text-xs text-slate-400">Call / WhatsApp</span>
+                    <span class="text-sm font-semibold text-white">+971 56 131 1507</span>
+                </a>
+                <a href="https://linkedin.com/in/asad-gilani-65b2ba1b" target="_blank" class="bg-cardBg hover:bg-cardHover p-5 rounded-xl border border-slate-800 transition flex flex-col items-center gap-2">
+                    <i class="fa-brands fa-linkedin text-indigo-400 text-xl"></i>
+                    <span class="text-xs text-slate-400">LinkedIn Network</span>
+                    <span class="text-sm font-semibold text-white">asad-gilani</span>
+                </a>
+            </div>
+
+            <div class="pt-12 text-xs text-slate-500 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>© 2026 Asad Gilani · Lead Software Engineer & Technical Architect</p>
+                <p>Dubai, United Arab Emirates</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

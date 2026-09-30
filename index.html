@@ -43,7 +43,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center pt-24 pb-16 px-6 overflow-hidden">
+    <section id="about" class="relative min-h-screen flex items-center pt-24 pb-16 px-6 overflow-hidden">
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
         
         <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -328,9 +328,9 @@
         </div>
     </section>
 
-    <!-- Recruiter? Ask AI Widget (Bottom Right Floating Button & Drawer) -->
+    <!-- Recruiter? Ask AI Widget Button -->
     <div class="fixed bottom-6 right-6 z-50">
-        <button id="aiChatBtn" onclick="toggleAIChat()" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white px-4 py-3 rounded-full shadow-2xl flex items-center gap-2.5 text-xs font-semibold transition group">
+        <button id="aiChatBtn" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white px-4 py-3 rounded-full shadow-2xl flex items-center gap-2.5 text-xs font-semibold transition cursor-pointer group">
             <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
             <i class="fa-solid fa-sparkles text-indigo-400"></i> RECRUITER? ASK AI
         </button>
@@ -349,7 +349,7 @@
                         <p class="text-[10px] text-emerald-400 font-mono">Online · Trained on Asad's CV</p>
                     </div>
                 </div>
-                <button onclick="toggleAIChat()" class="text-slate-400 hover:text-white p-1">
+                <button id="closeAiChat" class="text-slate-400 hover:text-white p-1 cursor-pointer">
                     <i class="fa-solid fa-xmark text-lg"></i>
                 </button>
             </div>
@@ -362,18 +362,33 @@
 
             <div class="p-3 bg-slate-900 border-t border-slate-800 flex gap-2">
                 <input type="text" id="chatInput" placeholder="e.g. Does Asad have Azure experience?" class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500" onkeypress="handleKey(event)">
-                <button onclick="sendAIMessage()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-xl text-xs font-semibold transition">Send</button>
+                <button onclick="sendAIMessage()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-xl text-xs font-semibold transition cursor-pointer">Send</button>
             </div>
         </div>
     </div>
 
-    <!-- AI Widget Script -->
+    <!-- AI Widget Script & Interactivity Handling -->
     <script>
-        function toggleAIChat() {
+        document.addEventListener('DOMContentLoaded', () => {
+            const aiBtn = document.getElementById('aiChatBtn');
+            const closeBtn = document.getElementById('closeAiChat');
             const drawer = document.getElementById('aiChatDrawer');
-            drawer.classList.toggle('hidden');
-            drawer.classList.toggle('flex');
-        }
+
+            function toggleAIChat() {
+                drawer.classList.toggle('hidden');
+                drawer.classList.toggle('flex');
+            }
+
+            if (aiBtn) aiBtn.addEventListener('click', toggleAIChat);
+            if (closeBtn) closeBtn.addEventListener('click', toggleAIChat);
+            
+            // Also close if clicking outside modal box background
+            if (drawer) {
+                drawer.addEventListener('click', (e) => {
+                    if (e.target === drawer) toggleAIChat();
+                });
+            }
+        });
 
         function handleKey(e) {
             if (e.key === 'Enter') sendAIMessage();
@@ -385,26 +400,26 @@
             const query = input.value.trim();
             if (!query) return;
 
-            // User message
-            messages.innerHTML += `<div class="bg-indigo-600/20 border border-indigo-500/30 p-3 rounded-xl ml-auto max-w-[85%] text-white">${query}</div>`;
+            // User message bubble
+            messages.innerHTML += `<div class="bg-indigo-600/25 border border-indigo-500/30 p-3 rounded-xl ml-auto max-w-[85%] text-white">${query}</div>`;
             input.value = '';
             messages.scrollTop = messages.scrollHeight;
 
-            // Simulated intelligent response based on Asad's CV
+            // Automated response logic based on Asad's CV data
             setTimeout(() => {
-                let reply = "Asad has over 13 years of enterprise software experience, specializing in C#, .NET Core, Microservices, and Microsoft Azure deployments with zero-downtime Blue/Green strategies.";
+                let reply = "Asad has over 13 years of enterprise software experience, specializing in C#, .NET Core, Microservices, and Microsoft Azure deployments.";
                 const q = query.toLowerCase();
                 if (q.includes('azure') || q.includes('cloud')) {
                     reply = "Yes! Asad is Microsoft Certified in Azure Fundamentals and Data Fundamentals, with extensive hands-on experience building solutions across Azure SQL, Azure Functions, and Azure Active Directory.";
-                } else.includes('net') || q.includes('c#') || q.includes('backend')) {
-                    reply = "Asad is a Lead Software Engineer with deep expertise in C#, .NET Core, EF Core, REST APIs, and microservices architecture.";
+                } else if (q.includes('net') || q.includes('c#') || q.includes('backend')) {
+                    reply = "Asad is a Lead Software Engineer with deep hands-on expertise in C#, .NET Core, EF Core, REST APIs, and microservices-oriented application design.";
                 } else if (q.includes('experience') || q.includes('years') || q.includes('lisec')) {
                     reply = "Asad has been working as a Lead Software Engineer / Development Team Lead at LiSEC Automation Middle East FZ-LLC in Dubai since September 2013.";
                 } else if (q.includes('contact') || q.includes('email') || q.includes('phone')) {
                     reply = "You can reach Asad directly via email at 082asad@gmail.com or by phone/WhatsApp at +971 56 131 1507.";
                 }
 
-                messages.innerHTML += `<div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800 max-w-[85%] text-slate-300">${reply}</div>`;
+                messages.innerHTML += `<div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800 max-w-[85%] text-slate-300">${reply}</div>`;
                 messages.scrollTop = messages.scrollHeight;
             }, 600);
         }
